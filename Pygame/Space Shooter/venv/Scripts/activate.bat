@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=F:\Python Projects\Python Projects\Space Shooter\venv
+set VIRTUAL_ENV=E:\Gits\Python-Projects\Pygame\Space Shooter\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

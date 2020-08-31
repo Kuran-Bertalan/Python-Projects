@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e50e0543-a461-43de-b5d5-3f810192312b" name="Default Changelist" comment="" />
+    <list default="true" id="bdb3c642-4d87-4f46-a234-feb95de7fc80" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1gDhu7qujgMv09UeB5tIRjWyPFr" />
+  <component name="ProjectId" id="1gsCECaBaT57UQB0uDRPxpTc9fq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,54 +45,23 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e50e0543-a461-43de-b5d5-3f810192312b" name="Default Changelist" comment="" />
-      <created>1597655289269</created>
+      <changelist id="bdb3c642-4d87-4f46-a234-feb95de7fc80" name="Default Changelist" comment="" />
+      <created>1598893798211</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1597655289269</updated>
+      <updated>1598893798211</updated>
     </task>
     <servers />
   </component>
-  <component name="WindowStateProjectService">
-    <state width="896" height="351" key="GridCell.Tab.0.bottom" timestamp="1597752784911">
-      <screen x="0" y="40" width="1920" height="1040" />
-    </state>
-    <state width="616" height="281" key="GridCell.Tab.0.bottom/0.40.1920.1040/0.-1040.1920.1040@0.40.1920.1040" timestamp="1597685751529" />
-    <state width="896" height="351" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1597752784911" />
-    <state width="896" height="351" key="GridCell.Tab.0.center" timestamp="1597752784910">
-      <screen x="0" y="40" width="1920" height="1040" />
-    </state>
-    <state width="616" height="281" key="GridCell.Tab.0.center/0.40.1920.1040/0.-1040.1920.1040@0.40.1920.1040" timestamp="1597685751529" />
-    <state width="896" height="351" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1597752784910" />
-    <state width="896" height="351" key="GridCell.Tab.0.left" timestamp="1597752784910">
-      <screen x="0" y="40" width="1920" height="1040" />
-    </state>
-    <state width="616" height="281" key="GridCell.Tab.0.left/0.40.1920.1040/0.-1040.1920.1040@0.40.1920.1040" timestamp="1597685751529" />
-    <state width="896" height="351" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1597752784910" />
-    <state width="896" height="351" key="GridCell.Tab.0.right" timestamp="1597752784911">
-      <screen x="0" y="40" width="1920" height="1040" />
-    </state>
-    <state width="616" height="281" key="GridCell.Tab.0.right/0.40.1920.1040/0.-1040.1920.1040@0.40.1920.1040" timestamp="1597685751529" />
-    <state width="896" height="351" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1597752784911" />
-    <state width="896" height="351" key="GridCell.Tab.1.bottom" timestamp="1597752784911">
-      <screen x="0" y="40" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.40.1920.1040/0.-1040.1920.1040@0.40.1920.1040" timestamp="1597659672505" />
-    <state width="896" height="351" key="GridCell.Tab.1.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1597752784911" />
-    <state width="896" height="351" key="GridCell.Tab.1.center" timestamp="1597752784911">
-      <screen x="0" y="40" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.center/0.40.1920.1040/0.-1040.1920.1040@0.40.1920.1040" timestamp="1597659672505" />
-    <state width="896" height="351" key="GridCell.Tab.1.center/0.40.1920.1040@0.40.1920.1040" timestamp="1597752784911" />
-    <state width="896" height="351" key="GridCell.Tab.1.left" timestamp="1597752784911">
-      <screen x="0" y="40" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.left/0.40.1920.1040/0.-1040.1920.1040@0.40.1920.1040" timestamp="1597659672505" />
-    <state width="896" height="351" key="GridCell.Tab.1.left/0.40.1920.1040@0.40.1920.1040" timestamp="1597752784911" />
-    <state width="896" height="351" key="GridCell.Tab.1.right" timestamp="1597752784911">
-      <screen x="0" y="40" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.right/0.40.1920.1040/0.-1040.1920.1040@0.40.1920.1040" timestamp="1597659672505" />
-    <state width="896" height="351" key="GridCell.Tab.1.right/0.40.1920.1040@0.40.1920.1040" timestamp="1597752784911" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
