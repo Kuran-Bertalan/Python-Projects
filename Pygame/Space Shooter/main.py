@@ -2,14 +2,15 @@ import pygame
 import os
 import time
 import random
-pygame.font.init()
 
+pygame.mixer.pre_init(frequency= 44100, size= 16, channels= 1, buffer=512)
+pygame.init()
 # Display set
 WIDTH, HEIGHT = 750, 750
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 
 # Caption
-
+game_font = pygame.font.Font('ka1.ttf', 30)
 pygame.display.set_caption("Space Shooter")
 
 # Load Images
@@ -31,6 +32,18 @@ YELLOW_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_yellow.png"
 # Background
 
 BG = pygame.transform.scale(pygame.image.load(os.path.join("assets", "background-black.png")), (WIDTH, HEIGHT))
+
+# Sounds
+
+background = pygame.mixer.Sound('sounds/Background.wav')
+hit_collision = pygame.mixer.Sound('sounds/Player_Collision.wav')
+enemy_death = pygame.mixer.Sound('sounds/Enemy_Death.wav')
+enemy_shoot = pygame.mixer.Sound('sounds/Enemy_Shoot.wav')
+player_shoot = pygame.mixer.Sound('sounds/Player_Shoot.wav')
+player_hit = pygame.mixer.Sound('sounds/Player_Hit.wav')
+player_death = pygame.mixer.Sound('sounds/Player_Death.wav')
+lives_lost = pygame.mixer.Sound('sounds/Lives_Lost.wav')
+next_level = pygame.mixer.Sound('sounds/Next_Level.wav')
 
 
 class Laser:
@@ -79,6 +92,7 @@ class Ship:
             elif laser.collision(obj):
                 obj.health -= 20
                 self.lasers.remove(laser)
+                player_hit.play()
 
     def cooldown(self):
         if self.cool_down_counter >= self.COOLDOWN_TIMER:
@@ -91,6 +105,10 @@ class Ship:
             laser = Laser(self.x, self.y, self.laser_img)
             self.lasers.append(laser)
             self.cool_down_counter = 1
+            if self.__class__ == Player:
+                player_shoot.play()
+            if self.__class__ == Enemy and not laser.off_screen(HEIGHT):
+                enemy_shoot.play()
 
     def get_width(self):
         return self.ship_img.get_width()
@@ -128,9 +146,9 @@ class Player(Ship):
 
     def healthbar(self, window):
         pygame.draw.rect(window, (255,0,0),
-                         (self.x, self.y + self.ship_img.get_height() + 10, self.ship_img.get_width(), 10))
+                         (self.x, self.y + self.ship_img.get_height() - 15, self.ship_img.get_width(), 10))
         pygame.draw.rect(window, (0,255,0),
-                         (self.x, self.y + self.ship_img.get_height() + 10, self.ship_img.get_width() * (self.health/self.max_health), 10))
+                         (self.x, self.y + self.ship_img.get_height() - 15, self.ship_img.get_width() * (self.health/self.max_health), 10))
 
 
 class Enemy(Ship):
@@ -160,8 +178,11 @@ def main():
     FPS = 60
     level = 0
     lives = 3
-    main_font = pygame.font.SysFont("comicsans", 50)
-    lost_font = pygame.font.SysFont("comicsans", 60)
+    main_font = pygame.font.Font('ka1.ttf', 30)
+    lost_font = pygame.font.Font('ka1.ttf', 30)
+
+    # Background Song
+    background.play()
 
     # Enemies
     enemies = []
@@ -199,6 +220,7 @@ def main():
         if lost:
             lost_label = lost_font.render("You Lost!!", 1, (255,255,255))
             WIN.blit(lost_label, (WIDTH/2 - lost_label.get_width()/2, 350))
+            player_death.play()
 
         pygame.display.update()
 
@@ -217,6 +239,7 @@ def main():
                 continue
 
         if len(enemies) == 0:
+            next_level.play()
             level += 1
             wave_length += 5
             for i in range(wave_length):
@@ -251,19 +274,20 @@ def main():
             if collide(enemy, player):
                 player.health -= 10
                 enemies.remove(enemy)
+                hit_collision.play()
             elif enemy.y + enemy.get_height() > HEIGHT:
                 lives -= 1
                 enemies.remove(enemy)
+                lives_lost.play()
 
         player.move_lasers(-laser_vel, enemies)
 
 
 def main_menu():
-    title_font = pygame.font.SysFont("comicsans", 70)
     run = True
     while run:
         WIN.blit(BG, (0,0))
-        title_label = title_font.render("Press the mouse to begin...", 1, (255,255,255))
+        title_label = game_font.render("Press the mouse to begin...", 1, (255,255,255))
         WIN.blit(title_label, (WIDTH/2 - title_label.get_width()/2, 350))
         pygame.display.update()
         for event in pygame.event.get():
@@ -271,6 +295,7 @@ def main_menu():
                 run = False
             if event.type == pygame.MOUSEBUTTONDOWN:
                 main()
+        pygame.mixer.stop()
     pygame.quit()
 
 
